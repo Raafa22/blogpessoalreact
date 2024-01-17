@@ -1,21 +1,32 @@
-import React from 'react'
+import React from 'react';
+import homeLogo from '../../assets/homelogo.jpg'
+import './Home.css';
+
 
 function Home() {
-  return (
-    <div className="border-4 border-[#dc143c] m-8 p-8 flex items-center justify-center">
-        
-        <div className="w-[250px]">
-            <h1>Scarlet Witch</h1>
-            <p>Mais Poderosa que Mago Supremo</p>
+    return (
+        <>
+        <div className="bg-indigo-900 flex justify-center">
+          <div className='container grid grid-cols-2 text-white'>
+            <div className="flex flex-col gap-4 items-center justify-center py-4">
+              <h2 className='text-5xl font-bold'>Seja bem vinde!</h2>
+              <p className='text-xl'>Expresse aqui seus pensamentos e opniões</p>
+  
+              <div className="flex justify-around gap-4">
+              
+                <button className='rounded bg-white text-blue-800 py-2 px-4'>Ver postagens</button>
+              </div>
+            </div>
+  
+            <div className="flex justify-center ">
+              <img src={homeLogo} alt="" className='w-2/3' />
+      
+            </div>
+          </div>
         </div>
-
-        <div className="w-[250px]"> 
-        <img
-        src="https://s2-techtudo.glbimg.com/jxXHc3EdjD0OOd56RGmFP_Onj_M=/0x0:2000x1333/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/5/Z/X459CWScKmJE3wxjw0UQ/parkwood.jpg"
-        alt="Scarlet Witch " />
-        </div>  
-    </div>
-  )
+      
+      </>
+    );
 }
 
-export default Home
+export default Home;

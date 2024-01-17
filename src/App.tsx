@@ -1,15 +1,25 @@
-import React from 'react';
-import Home from './paginas/home/Home';
 import './App.css';
-import Grid from './Componentes/Grid/Grid';
-
+import Home from './paginas/home/Home';
+import Footer from './Componentes/footer/Footer';
+import Navbar from './Componentes/NavBar';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Login from './paginas/login/Login';
 
 function App() {
-  return(
-  <>
-   <Grid />
-   </>
-  );
+  return (
+    <>
+    <BrowserRouter>
+        <Navbar />
+          <div className='min-h-[80vh]'>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/home" element={<Home />} />
+            </Routes>
+          </div>
+          <Footer />
+        </BrowserRouter>
+    </>
+);
 }
-
 export default App;
