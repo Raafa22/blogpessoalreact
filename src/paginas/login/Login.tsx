@@ -8,7 +8,9 @@ import UsuarioLogin from '../../models/UsuarioLogin';
 import { RotatingLines } from 'react-loader-spinner';
 
 function Login() {
+ 
   let navigate = useNavigate();
+
 
   const [usuarioLogin, setUsuarioLogin] = useState<UsuarioLogin>(
     {} as UsuarioLogin
@@ -17,7 +19,8 @@ function Login() {
   const { usuario, handleLogin } = useContext(AuthContext);
 
   const {isLoading} = useContext(AuthContext) 
-
+  
+//Redireciona para Home
   useEffect(() => {
     if (usuario.token !== "") {
         navigate('/home')
@@ -30,7 +33,7 @@ function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
       [e.target.name]: e.target.value
   })
 }
-
+// que acessa e dispara a função handleLogin(email e senha do usuario vai logar ele )
 function login(e: ChangeEvent<HTMLFormElement>) {
   e.preventDefault()
   handleLogin(usuarioLogin)
@@ -65,7 +68,7 @@ function login(e: ChangeEvent<HTMLFormElement>) {
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
-          <button  type='submit' className="rounded bg-indigo-400 hover:bg-indigo-900 text-white w-1/2 py-2 flex justify-center">
+          <button  type='submit' className='rounded bg-[#4b73bd] text-white py-2 px-4 hover:bg-[#3f93ff]/25 hover:text-white animate-bounce'>
            {isLoading ? <RotatingLines
             strokeColor="white"
             strokeWidth="5"
@@ -73,7 +76,7 @@ function login(e: ChangeEvent<HTMLFormElement>) {
             width="24"
             visible={true}
           /> :
-            <span>Entrar</span>}
+          <span className="">Entrar</span>}
           </button>
 
           <hr className="border-slate-800 w-full" />
