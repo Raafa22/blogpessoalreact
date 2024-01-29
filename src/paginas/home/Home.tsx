@@ -1,5 +1,5 @@
 import React from 'react';
-import homeLogo from '../../assets/homelogo.jpg'
+import logo from '../../assets/logo.svg'
 import './Home.css';
 import ListaPostagens from '../../Componentes/componente/postagens/listaPostagens/ListaPostagens';
 import ModalPostagem from '../../Componentes/componente/postagens/modalPostagem/ModalPostagem';
@@ -22,7 +22,7 @@ function Home() {
             </div>
   
             <div className="flex justify-center ">
-              <img src={homeLogo} alt="" className='w-2/3' />
+              <img src={logo} alt="" className='w-2/3' />
       
             </div>
           </div>
