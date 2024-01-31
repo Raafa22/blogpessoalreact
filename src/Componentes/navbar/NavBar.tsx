@@ -23,15 +23,16 @@ function Navbar() {
             <Link to='/home' className='text-2xl font-bold uppercase'>Blog Pessoal</Link>
 
             <div className='flex gap-4'>
-             <Link to='/home' className='hover:underline'>Home</Link>
-              <Link to='/postagens' className='hover:underline'>Postagens</Link>           
-              <Link to='/temas' className='hover:underline'>Temas</Link>
-              <Link to='/cadastroTema' className='hover:underline'>Cadastrar tema</Link>
-              <Link to='/perfil' className='hover:underline'>Perfil</Link>
-              <Link to='' onClick={logout} className='hover:underline'>Sair</Link>
+             <Link to='/Home' className='font-bold cursor-pointer hover:text-[#67d2d2] animate-pulse'>Home</Link>
+              <Link to='/postagens' className='font-bold cursor-pointer hover:text-[#67d2d2] animate-pulse'>Postagens</Link>
+              <Link to='/temas' className='font-bold cursor-pointer hover:text-[#67d2d2] animate-pulse'>Temas</Link>
+              <Link to='/cadastroTema' className='font-bold cursor-pointer hover:text-[#67d2d2] animate-pulse'>Cadastrar tema</Link>
+              <Link to='/perfil' className='font-bold cursor-pointer hover:text-[#67d2d2] animate-pulse'>Perfil</Link>
+              <Link to='' onClick={logout} className='font-bold cursor-pointer hover:text-[#67d2d2] animate-pulse'>Sair</Link>
+            </div>
             </div>
           </div>
-        </div>
+        
       )
     }
 

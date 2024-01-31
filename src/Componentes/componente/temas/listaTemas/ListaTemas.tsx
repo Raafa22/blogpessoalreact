@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useContext, useEffect, useState } from 'react';
-import { DNA } from 'react-loader-spinner';
+import { Triangle } from 'react-loader-spinner';
 import { useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '../../../../contexts/AuthContext';
 import Tema from '../../../../models/Tema';
@@ -41,13 +41,14 @@ function ListaTemas() {
   return (
     <>
       {temas.length === 0 && (
-        <DNA
+        <Triangle
           visible={true}
           height="200"
-          width="200"
-          ariaLabel="dna-loading"
+          width="2000"
+          color="#1AD9F3"
+          ariaLabel="triangle-loading"
           wrapperStyle={{}}
-          wrapperClass="dna-wrapper mx-auto"
+          wrapperClass="triangle-wrapper mx-auto"
         />
       )}
       <div className="flex justify-center w-full my-4">
